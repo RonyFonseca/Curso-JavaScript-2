@@ -13,3 +13,11 @@ somar = () => {
         console.log(`O seu valor `+valor+` + `+i+` = `+valor2)
     }
 }
+
+
+var ar1 = [1,2,3]
+var ar2 = [4,5,6]
+
+var newAr = [...ar1,"%",...ar2]
+
+console.log(newAr)
