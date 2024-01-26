@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vip</title>
+</head>
+<body>
+    <script>
+        const list = [
+            {nome: "Rodolfo", vip: true},
+            {nome: "Maria", vip: false},
+            {nome: "João", vip: true},
+            {nome: "Bruno", vip: true},
+            {nome: "Carla", vip: false}, 
+            {nome: "Ana", vip: true},
+            {nome: "Julio", vip: false}
+        ]
+
+        const newList = list.map( (pessoa) => {
+            if( pessoa.vip == true){
+                pessoa.local = "Black"
+            }else {
+                pessoa.local = "Green"
+            }
+            return pessoa
+        })
+
+        console.log(newList)
+
+        const student = [
+            {nome: "Rodolfo", nota: 7},
+            {nome: "Maria", nota: 5},
+            {nome: "João", nota: 8},
+            {nome: "Bruno", nota: 9},
+            {nome: "Carla", nota: 3}, 
+            {nome: "Ana", nota: 2},
+            {nome: "Julio", nota: 10}
+        ]
+
+        
+
+        const newStudents = student.map((estudante) => {
+            delete estudante.nota
+            if( estudante.nota > 7 ){
+                estudante.finalteste = "Aprovado"
+            }else {
+                estudante.finalteste = "Aprovado"
+            }
+            return estudante
+        })
+
+        console.log(newStudents)
+
+    </script>
+</body>
+</html>

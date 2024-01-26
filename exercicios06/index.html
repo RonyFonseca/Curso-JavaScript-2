@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relembrando map filter e reduce</title>
+</head>
+<body>
+    <script>
+        const empresas = [
+            {nome: "Facebook", dinheiro:200, data: 1980},
+            {nome: "Google", dinheiro:300, data: 2000},
+            {nome: "Yotube", dinheiro:150, data: 1890},
+            {nome: "Twitter", dinheiro:250, data: 2005},
+            {nome: "WhatsApp", dinheiro:500, data: 2020},
+            {nome: "TikTok", dinheiro:400, data: 1894},
+            {nome: "Kawai", dinheiro:450, data: 1896}
+        ]
+
+        const novoValorMercado = empresas.map((emp) => {
+            emp.dinheiro = (0.1 * emp.dinheiro) + emp.dinheiro
+            return emp
+        })
+
+        console.log(novoValorMercado)
+
+        const empresasAntigas = novoValorMercado.filter((emp) => {
+            return emp.data <= 2000
+        })
+
+        console.log(empresasAntigas)
+
+        const somaEmpresasAntigas = empresasAntigas.reduce((acumulador, atual) => {
+            return acumulador + atual.dinheiro
+        },0)
+
+        console.log(somaEmpresasAntigas)
+
+    </script>
+</body>
+</html>

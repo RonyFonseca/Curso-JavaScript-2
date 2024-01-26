@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For each</title>
+</head>
+<body>
+    <script>
+        const arr = [{name: "Rony", idade:18}, {name: "Bruno", idade: 20}, {name: "Testa", idade: 30}]
+
+        let pessoal = 0
+        arr.forEach((e, i)=> {
+            pessoal += e.idade
+        })
+
+        const idm = pessoal / arr.length
+        console.log(idm.toFixed(0))
+    </script>
+</body>
+</html>

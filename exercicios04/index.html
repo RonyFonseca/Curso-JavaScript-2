@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+    <script>
+        //GERAR UM NOVO ARRAY SÓ COM OS NÚMEROS PARES E DIVISIVEIS POR 5
+        const list = [10,15,30,33,43,36]
+        const paresList = list.filter((num) => {
+            if(num%2 !== 0){
+                return false
+            }   
+            if(num%5 !== 0){
+                return false
+            }
+
+            return true
+
+        })
+        console.log(paresList)
+
+    </script>
+</body>
+</html>

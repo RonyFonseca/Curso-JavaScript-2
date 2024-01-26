@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+    <script>
+
+        //CALCULAR O VALOR DESSAS EMPRESAS TUDO JUNTO USANDO REDUCE
+        const empresas = [
+            {nome: "Facebook", dinheiro:200},
+            {nome: "Google", dinheiro:300},
+            {nome: "Yotube", dinheiro:150},
+            {nome: "Twitter", dinheiro:250},
+            {nome: "Instagram", dinheiro:500}
+        ]
+
+        const soma = empresas.reduce((acumulador, atual) => {
+            return acumulador + atual.dinheiro
+        },0)
+
+        console.log(soma)
+        
+    </script>
+</body>
+</html>

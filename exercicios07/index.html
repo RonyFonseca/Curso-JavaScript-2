@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="my-input" placeholder="Primeiro nome">
+        <input type="text" name="my-input" placeholder="Segundo nome">
+    </div>
+
+    <div>
+        <input type="text" name="Empresa" placeholder="Nome">
+        <input type="text" name="Empresa" placeholder="Dinheiro">
+        <input type="text" name="Empresa" placeholder="Data">
+    </div>
+
+    <div id="text">
+
+    </div>
+
+    <button onclick="pegarAssunto()">Enviar</button>
+
+    <script>
+
+        pegarAssunto = () => {
+            let inputs = document.getElementsByName('my-input')
+            let inputsArr = [...inputs]
+        
+            const contentInputs = inputsArr.map((e) => {
+                return e.value
+            })
+
+            const juntar = contentInputs.reduce((acumulador, atual) => {
+                return `${acumulador} `+`${atual}`
+            },"")
+
+            empresa(juntar)
+        }
+
+        empresa = (juntar) => {
+            const inputs = document.getElementsByName('Empresa')
+            let inputsArr = [...inputs]
+
+            const empresas = [
+                {name:inputsArr[0].value, dinheiro:inputsArr[1].value, data:inputsArr[2].value}
+            ]
+
+            adicionar(empresas, juntar)
+        }
+
+        adicionar = (empresas, juntar) => {
+            let text = document.getElementById('text')
+            for(e in empresas){
+                text.innerHTML += `<p>Nome do comprador: ${juntar}</p>`
+                text.innerHTML += `<p>Nome da Empresa: ${empresas[e].name}</p>`
+                text.innerHTML += `<p>Quantida paga: ${empresas[e].dinheiro}</p>`
+                text.innerHTML += `<p>Data do pagamento: ${empresas[e].data}</p>`
+
+            }
+        }
+
+
+    </script>
+</body>
+</html>

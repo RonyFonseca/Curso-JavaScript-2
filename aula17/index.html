@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield</title>
+</head>
+<body>
+    <script>
+        function* cores(){
+            yield 'azul'
+            yield 'vermelho'
+            yield 'laranja'
+        }
+
+        console.log(cores().next().value)
+        console.log(cores().next().value)
+
+    </script>
+</body>
+</html>

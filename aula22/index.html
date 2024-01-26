@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrau - metodos</title>
+</head>
+<body>
+    <script>
+        //push - adicionar no array 
+        //lenght - fala o tamanho do array
+        //sort - organiza o array por ordem alfabética
+        //delete - deleta um certo item quando vc passa um indice
+
+        let arr = ["Rony","Rauan","Luke"]
+        arr.push("Bruno")
+        arr.sort()
+        console.log(arr)
+        delete arr[1]
+        console.log(arr)
+
+
+        //splice  -podemor tirar ou por itens na quantidade que quiser na posição que a gente quer 
+        //slice - a gente tira itens do array aparti do item passado tipo num = [1,2,3]; num.slice(1,) apartir do indice 1 ele apaga [1,2]
+        //pop - ele apagou o ultimo item do array 
+        //shift - tira o primeiro item do array 
+
+        arr.splice(0,2,"bruno")
+        console.log(arr)
+
+    </script>
+</body>
+</html>

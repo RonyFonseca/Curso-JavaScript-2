@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculadora</title>
+</head>
+<body>
+    <script>
+        const calcular = (n1,n2,op) => {
+            let res
+            switch (op) {
+                case "+":
+                    res = n1 + n2
+                    break;
+                case "-": 
+                    res = n1 - n2
+                    break;
+
+                case "*": 
+                    res = n1 * n2
+                    break;
+
+                case "/":
+                    res = n1 / n2 
+                    break;
+            
+                default:
+                    res = n1 + n2
+                    break;
+            }
+            return res 
+        }
+        console.log(calcular(6,2,"+"))
+    </script>
+</body>
+</html>
