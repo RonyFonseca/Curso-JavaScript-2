@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos</title>
+    <style>
+        #form {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            gap: 15px;
+            align-items: end;
+        }
+        div {
+            background-color: rgba(161, 161, 161, 0.418);
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+            border-radius: 25px;
+            align-items: center;
+        }
+        input, button {
+            border: none;
+            background-color: transparent;
+        }
+
+        .icon {
+            font-size: 20px;
+            background-color: orange;
+            padding: 10px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        div:hover > input {
+            width: 240px;
+            padding-left: 10px;
+        }
+
+        input {
+            height: 35px;
+            outline: none;
+            width: 0;
+            padding: 0;
+            transition: 1s;
+        }
+
+        #button-trash {
+            display: none;
+        }
+
+        #icon-trash {
+            font-size: 17px;
+            color: rgba(94, 94, 94, 0.781);
+        }
+
+        .icon-check {
+            background-color: greenyellow;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="form">
+        <div >
+            <input type="text" placeholder="Seu nome">
+            <button><ion-icon name="person-circle-outline" class="icon-check"></ion-icon></button>
+        </div>
+        <div >
+            <input type="email" placeholder="Seu Email">
+            <button><ion-icon name="mail-outline" class="icon"></ion-icon></button>
+        </div>
+        <div >
+            <input type="password" placeholder="Digite sua senha" id="password">
+            <button id="button-eye"><ion-icon name="eye-outline" class="icon" id="icon-eye"></ion-icon></button>
+        </div>
+    </div>
+    
+    <script>
+        let buttonEye = document.querySelector('#button-eye')
+
+        buttonEye.addEventListener("click", () => {
+            let icon = document.querySelector('icon-eye')
+            let inputPassword = document.querySelector('#password')
+            if(icon.getAttribute("name") === "eye-off-outline"){
+                icon.setAttribute("name", "eye-outline")
+                inputPassword.setAttribute("type", "password")
+            } else {
+                icon.setAttribute("name", "eye-off-outline")
+                inputPassword.setAttribute("type", "text")
+            }
+        })
+    </script>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

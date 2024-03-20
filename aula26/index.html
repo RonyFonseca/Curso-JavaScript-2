@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append</title>
+</head>
+<body>
+    <ul>
+        <li>Texto1</li>
+        <li>Texto2</li>
+        <li>Texto3</li>
+    </ul>
+    <button>Adicionar</button>
+    <script>
+        let button = document.querySelector("button")
+        let cont = 3
+        button.addEventListener("click", () => {
+            let ul = document.querySelector("ul")
+            let newLi = document.createElement("li")
+            ++cont
+            newLi.innerHTML = "Texto"+cont
+            ul.appendChild(newLi)
+        })
+    </script>
+</body>
+</html>
